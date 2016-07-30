@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="company.calendarprovider.MainActivity">
+
+    <Button
+        android:id="@+id/addEventButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onAddEventClicked"
+        android:text="Add Event"
+        android:layout_marginTop="91dp"
+        android:layout_below="@+id/lugar" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/Titulo"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/desc" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TITULO:"
+        android:id="@+id/textView"
+        android:textSize="18dp"
+        android:layout_alignTop="@+id/Titulo"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/Titulo"
+        android:gravity="bottom" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/desc"
+        android:layout_below="@+id/Titulo"
+        android:layout_alignEnd="@+id/addEventButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DESCRIPCIÓN:"
+        android:id="@+id/textView2"
+        android:textSize="18dp"
+        android:gravity="bottom"
+        android:layout_alignBottom="@+id/desc"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LUGAR:"
+        android:id="@+id/textView3"
+        android:textSize="18dp"
+        android:gravity="bottom"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="34dp" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/lugar"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignEnd="@+id/addEventButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="recuperar"
+        android:id="@+id/recuperar"
+        android:layout_marginBottom="41dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/textView2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/evento"
+        android:hint="id del evento"
+        android:layout_above="@+id/recuperar"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/recuperar"
+        android:inputType="number" />
+
+</RelativeLayout>
